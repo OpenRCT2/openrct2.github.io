@@ -29,3 +29,22 @@ body {
 #brand-text spand {
 	font-size: 1.5em;
 }
+
+#links {
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000,-2px -2px 2px #000,2px -2px 2px #000,-2px 2px 2px #000;
+}
+
+#links > a {
+	display: block;
+	margin-bottom: 20px;
+	color: #dddddd;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px #000,-2px -2px 2px #000,2px -2px 2px #000,-2px 2px 2px #000;
+}
+
+#links > a:hover {
+	text-decoration: underline;
+}
