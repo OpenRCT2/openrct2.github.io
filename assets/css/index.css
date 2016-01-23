@@ -44,13 +44,23 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  animation: backgroundMoving 120s linear infinite, fadeOut 120s linear infinite;
   background-position: left center;
+  animation-name: backgroundMoving, fadeOut;
+  animation-duration: 120s, 120s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, infinite;
 }
 
 @media all and (min-width: 1920px) {
   #background li {
     background-size: cover;
+  }
+}
+
+@media all and (min-width: 1420px) {
+  #background li {
+    animation-name: fadeOut2;
+    background-position: center;
   }
 }
 
@@ -79,6 +89,10 @@ body {
   animation-delay: 90s;
 }
 
+@-webkit-keyframes reset {
+  to {width: 100%;}
+}
+
 @keyframes backgroundMoving {
   0% {
     background-position: left center;
@@ -95,6 +109,24 @@ body {
 }
 
 @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  22.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  97.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut2 {
   0% {
     opacity: 1;
   }
