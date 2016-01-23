@@ -75,18 +75,15 @@ body {
 @keyframes backgroundMoving {
   0% {
     background-position: left center;
-    z-index: auto;
   }
   25% {
     background-position: right center;
   }
-  50%{
+  97.5% {
     background-position: left center;
-    z-index: -1;
   }
   100% {
     background-position: left center;
-    z-index: -1;
   }
 }
 
@@ -100,8 +97,8 @@ body {
   25% {
     opacity: 0;
   }
-  25.1% {
-    opacity: 1;
+  97.5% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
