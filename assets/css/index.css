@@ -171,5 +171,5 @@ a:hover {
 }
 
 .otherPlatforms {
-  display: block;
+  display: inline-block;
 }
