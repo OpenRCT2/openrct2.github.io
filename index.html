@@ -21,7 +21,7 @@
     var current;
     
     document.addEventListener('DOMContentLoaded', function () {
-      var url = document.getElementsByClassName('url')[0];
+      var link = document.getElementsByClassName('link')[0];
       var size = document.getElementsByClassName('size')[0];
       var otherPlatforms = document.getElementsByClassName('otherPlatforms')[0];
 
@@ -38,10 +38,10 @@
 //      }
       
       if (current) {
-        url.href = current.url;
+        link.href = current.link;
         size.innerHTML = current.size + ' — ';
       } else {
-        url.href = otherPlatforms.href;
+        link.href = otherPlatforms.href;
         otherPlatforms.parentNode.removeChild(otherPlatforms);
         size.parentNode.removeChild(size);
       }
@@ -61,7 +61,7 @@
     <h2>Open source re-implementation of RollerCoaster Tycoon 2</h2>
     <ul id="buttons">
       <li>
-        <a class="url" href="">Download Stable (0.0.3.1)</a>
+        <a class="link" href="">Download Stable (0.0.3.1)</a>
         <div id="information">
           <span class="size"></span>Requires original RCT2
           <a class="otherPlatforms" href="https://github.com/OpenRCT2/OpenRCT2/releases">Other platforms…</a>
