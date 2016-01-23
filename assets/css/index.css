@@ -48,7 +48,13 @@ body {
   background-position: left center;
 }
 
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
+@media all and (min-width: 1920px) {
+  #background li {
+    background-size: cover;
+  }
+}
+
+@media all and (min-height: 1080px) {
   #background li {
     background-size: cover;
   }
