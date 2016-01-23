@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>OpenRCT2</title>
-		<link href="assets/css/openrct2.css" rel="stylesheet" />
-		<link rel="shortcut icon" href="favicon.ico">
-	</head>
-	<body>
-		<div id="brand">
-			<img width="512" height="512" src="assets/img/logo512.png" />
-			<div id="brand-text">
-				<h1>OpenRCT2</h1>
-				<span>Open source re-implementation of RollerCoaster Tycoon 2</span>
-			</div>
-			<div id="links">
-				<p>Some useful links</p>
-				<a href="https://servers.openrct2.website/">Master Server</a>
-				<a href="https://github.com/OpenRCT2/OpenRCT2">Project GitHub</a>
-			</div>
-		</div>
-		
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenRCT2</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script type="text/javascript">
+    var latestStable = {
+      platforms: {
+        windows: {
+          url: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.3.1/OpenRCT2-0.0.3.1-windows.zip',
+          size: '11.7 MB'
+        },
+        linux: {
+          url: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.3.1/OpenRCT2-0.0.3.1-linux.tar.xz',
+          size: '6 MB'
+        }
+      }
+    }
+    
+    var current;
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var url = document.getElementsByClassName('url')[0];
+      var size = document.getElementsByClassName('size')[0];
+      var otherPlatforms = document.getElementsByClassName('otherPlatforms')[0];
+
+      if (navigator.platform.indexOf('Win') >= 0){
+        current = latestStable.platforms.windows;
+      }
+
+      if (navigator.platform.indexOf('Linux') >= 0){
+        current = latestStable.platforms.linux;
+      }
+
+//      if (navigator.platform === 'MacIntel'){
+//        current = latestStable.platforms.osx;
+//      }
+      
+      if (current) {
+        url.href = current.url;
+        size.innerHTML = current.size + ' — ';
+      } else {
+        url.href = otherPlatforms.href;
+        otherPlatforms.parentNode.removeChild(otherPlatforms);
+        size.parentNode.removeChild(size);
+      }
+    });
+  </script>
+</head>
+<body>
+  <ul id="background">
+    <li>Screenshot 1</li>
+    <li>Screenshot 2</li>
+    <li>Screenshot 3</li>
+    <li>Screenshot 4</li>
+  </ul>
+  <div id="content">
+    <div id="logo">OpenRCT2</div>
+    <h1>OpenRCT2</h1>
+    <h2>Open source re-implementation of RollerCoaster Tycoon 2</h2>
+    <ul id="buttons">
+      <li>
+        <a class="url" href="">Download Stable (0.0.3.1)</a>
+        <div id="information">
+          <span class="size"></span>Requires original RCT2
+          <a class="otherPlatforms" href="https://github.com/OpenRCT2/OpenRCT2/releases">Other platforms…</a>
+        </div>
+      </li>
+      <li><a href="http://server.openrct2.website/">Master Server</a></li>
+    </ul>
+  </div>
+</body>
 </html>
