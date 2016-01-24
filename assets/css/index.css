@@ -15,9 +15,6 @@ body {
 #background {
   height: 100%;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,112 +32,22 @@ body {
   content: "";
 }
 
-#background li {
-  text-indent: -99999px;
-  color: transparent;
-  width: 100%;
-  height: 100%;
-  display: block;
+#background video {
   position: fixed;
-  top: 0;
-  left: 0;
-  background-position: left center;
-  animation-name: backgroundMoving, fadeOut;
-  animation-duration: 120s, 120s;
-  animation-timing-function: linear, linear;
-  animation-iteration-count: infinite, infinite;
+  top: 50%;
+  left: 50%;
+  margin-top: -540px;
+  margin-left: -960px;
 }
 
-@media all and (min-width: 1920px) {
-  #background li {
-    background-size: cover;
-  }
-}
-
-@media all and (min-width: 1420px) {
-  #background li {
-    animation-name: fadeOut2;
-    background-position: center;
-  }
-}
-
-@media all and (min-height: 1080px) {
-  #background li {
-    background-size: cover;
-  }
-}
-
-#background li:nth-of-type(4) {
-  background-image: url(../img/Screenshot_1.png);
-}
-
-#background li:nth-of-type(3) {
-  background-image: url(../img/Screenshot_2.png);
-  animation-delay: 30s;
-}
-
-#background li:nth-of-type(2) {
-  background-image: url(../img/Screenshot_3.png);
-  animation-delay: 60s;
-}
-
-#background li:nth-of-type(1) {
-  background-image: url(../img/Screenshot_4.png);
-  animation-delay: 90s;
-}
-
-@-webkit-keyframes reset {
-  to {width: 100%;}
-}
-
-@keyframes backgroundMoving {
-  0% {
-    background-position: left center;
-  }
-  25% {
-    background-position: right center;
-  }
-  97.5% {
-    background-position: left center;
-  }
-  100% {
-    background-position: left center;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  22.5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  97.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut2 {
-  0% {
-    opacity: 1;
-  }
-  22.5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  97.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+@media all and (min-width: 1920px), all and (min-height: 1080px) {
+  #background video {
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
