@@ -1,27 +1,32 @@
-html {
-  height: 100%;
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  height: 100%;
   color: #fff;
-  background-color: #000;
+  background: url(../img/screenshot.png) no-repeat #000 center;
+  background-size: cover;
+  -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
 }
 
 #background {
-  height: 100%;
-  width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   z-index: -1;
+  margin-top: -540px;
+  margin-left: -960px;
+  height: 1080px;
+  width: 1920px;
+  background-color: #000;
 }
 
-#background:after {
+#background video {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#gradient {
   background-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%);
   display: block;
   height: 1080px;
@@ -30,18 +35,14 @@ body {
   top: 0;
   left: 0;
   content: "";
-}
-
-#background video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -540px;
-  margin-left: -960px;
+  z-index: -1;
 }
 
 @media all and (min-width: 1920px), all and (min-height: 1080px) {
-  #background video {
+  body {
+    background-size: cover;
+  }
+  #background {
     top: 0;
     left: 0;
     min-width: 100%; 
@@ -51,11 +52,19 @@ body {
   }
 }
 
+@media all and (max-device-height: 799px) {
+  #background {
+    display: none;
+  }
+  #gradient {
+    position: absolute;
+    height: 597px;
+  }
+}
+
 #content {
   width: 300px;
-  margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 64px;
+  margin: 80px auto;
   z-index: 1;
   text-align: center;
 }
@@ -126,10 +135,9 @@ a:hover {
 }
 
 #footer ul {
-  padding: 0;
+  padding: 16px;
   margin: 0;
   list-style: none;
-  padding: 16px;
 }
 
 #footer li {
