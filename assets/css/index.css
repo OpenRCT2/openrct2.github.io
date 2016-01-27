@@ -33,8 +33,6 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  content: "";
   z-index: -1;
 }
 
@@ -45,10 +43,10 @@ body {
   #background {
     top: 0;
     left: 0;
-    min-width: 100%; 
-    min-height: 100%;
     margin-top: 0;
     margin-left: 0;
+    min-width: 100%; 
+    min-height: 100%;
   }
 }
 
@@ -88,13 +86,11 @@ body {
 #content h2 {
   font-size: 18px;
   font-weight: normal;
-  margin: 0;
   margin-top: 8px;
 }
 
 #buttons {
   list-style: none;
-  margin: 0;
   padding: 0;
   margin-top: 32px;
 }
@@ -116,7 +112,6 @@ a:hover {
 }
 
 .information {
-  display: block;
   font-size: 12px;
   color: #7D7D7D;
 }
