@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var size = document.getElementsByClassName('size')[0];
   var version = document.getElementsByClassName('version')[0];
   var platform = document.getElementsByClassName('platform')[0];
+  var background = document.getElementById('background');
+  
+  if (window.matchMedia && window.matchMedia('(max-device-height: 799px)').matches) {
+    background.parentNode.removeChild(background);
+  }
 
   if (navigator.platform.indexOf('Win') >= 0){
     current = platforms.windows;
