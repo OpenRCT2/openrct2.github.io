@@ -115,13 +115,13 @@ a:hover {
   text-decoration: underline;
 }
 
-#information {
+.information {
   display: block;
   font-size: 12px;
   color: #7D7D7D;
 }
 
-#information a {
+.information a {
   color: #7D7D7D;
 }
 
