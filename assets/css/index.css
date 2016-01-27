@@ -4,8 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   color: #fff;
-  background: url(../img/screenshot.png) no-repeat #000 center;
-  background-size: cover;
   -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
 }
 
@@ -37,9 +35,6 @@ body {
 }
 
 @media all and (min-width: 1920px), all and (min-height: 1080px) {
-  body {
-    background-size: cover;
-  }
   #background {
     top: 0;
     left: 0;
@@ -51,6 +46,10 @@ body {
 }
 
 @media all and (max-device-height: 799px) {
+  body {
+    background: url(../img/screenshot.png) no-repeat #000 center;
+    background-size: cover;
+  }
   #background {
     display: none;
   }
