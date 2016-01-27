@@ -32,10 +32,10 @@ var platforms = {
 var current;
 
 document.addEventListener('DOMContentLoaded', function () {
-  var link = document.getElementsByClassName('link')[0];
-  var size = document.getElementsByClassName('size')[0];
-  var version = document.getElementsByClassName('version')[0];
-  var platform = document.getElementsByClassName('platform')[0];
+  var link = document.getElementById('link');
+  var size = document.getElementById('size');
+  var version = document.getElementById('version');
+  var platform = document.getElementById('platform');
   var background = document.getElementById('background');
   
   if (window.matchMedia && window.matchMedia('(max-device-height: 799px)').matches) {
