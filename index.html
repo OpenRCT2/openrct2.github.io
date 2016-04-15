@@ -15,30 +15,30 @@
        var i = Math.floor(Math.log(bytes) / Math.log(k));
        return (bytes / Math.pow(k, i)).toPrecision(dm) + ' ' + sizes[i];
     }
-    
+
     var platforms = {
       windows: {
         name: 'Windows',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.3.1/OpenRCT2-0.0.3.1-windows.zip',
-        size: 12283910, //bytes
-        version: '0.0.3.1'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.4/OpenRCT2-v0.0.4-windows.zip',
+        size: 5252828, //bytes
+        version: '0.0.4'
       },
       linux: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.3.1/OpenRCT2-0.0.3.1-linux.tar.xz',
-        size: 6288140, //bytes
-        version: '0.0.3.1'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.4/OpenRCT2-v0.0.4-linux.tar.gz',
+        size: 7451070, //bytes
+        version: '0.0.4'
       },
-//      osx: {
-//        name: 'OS X',
-//        link: '',
-//        size: 0,
-//        version: ''
-//      }
+      osx: {
+        name: 'OS X',
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.4/OpenRCT2-v0.0.4-osx.zip',
+        size: 5593152,
+        version: '0.0.4'
+      }
     }
-    
+
     var current;
-    
+
     document.addEventListener('DOMContentLoaded', function () {
       var link = document.getElementsByClassName('link')[0];
       var size = document.getElementsByClassName('size')[0];
@@ -53,17 +53,17 @@
         current = platforms.linux;
       }
 
-//      if (navigator.platform === 'MacIntel'){
-//        current = platforms.osx;
-//      }
-      
+      if (navigator.platform === 'MacIntel'){
+        current = platforms.osx;
+      }
+
       if (current) {
         link.href = current.link;
         size.innerHTML = formatBytes(current.size, 1);
         platform.innerHTML = current.name;
         version.innerHTML = current.version;
       }
-      
+
       platform.addEventListener('click', function (e) {
         e.preventDefault();
         
@@ -102,9 +102,9 @@
     <h2>Open source re-implementation of RollerCoaster Tycoon 2</h2>
     <ul id="buttons">
       <li>
-        <a class="link" href="https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.3.1/OpenRCT2-0.0.3.1-windows.zip">Download Stable</a>
+        <a class="link" href="https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.0.4/OpenRCT2-v0.0.4-windows.zip">Download Stable</a>
         <div class="information">
-          <span class="version">0.0.3.1</span> — <a class="platform" href="#" title="Change platform…">Windows</a> — <span class="size">12.3 MB</span>
+          <span class="version">0.0.4</span> — <a class="platform" href="#" title="Change platform…">Windows</a> — <span class="size">5.2 MB</span>
         </div>
       </li>
       <li>
