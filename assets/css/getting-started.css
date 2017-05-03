@@ -1,5 +1,5 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -62,4 +62,45 @@ body {
 #banner-platform-selection button.active {
     background-color: #0977a8;
     color: #eee;
+}
+
+#content {
+    background-color: #eee;
+    color: #333;
+    margin: 0 auto;
+    padding: 24px;
+    width: 800px;
+}
+
+.terminal {
+    background-color: #000;
+    border-radius: 6px;
+    color: #eee;
+    font-family: Consolas, monospace;
+    line-height: 20px;
+    margin: 8px 0;
+    padding: 8px 10px;
+    white-space: pre-line;
+}
+
+a {
+    color: #10b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Segoe UI Light', Arial, sans-serif;
+    margin: 4px 0;
+}
+
+.page {
+    display: none;
+}
+
+.show {
+    display: block;
 }

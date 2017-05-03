@@ -6,17 +6,58 @@
 </head>
 <body>
     <div id="gradient"></div>
-    <div id="content">
+    <div>
         <div id="banner">
             <h1>Getting Started</h1>
             <div id="banner-platform-selection-container">
                 <div id="banner-platform-selection">
-                    <button class="active">Windows</button>
-                    <button>Linux</button>
-                    <button>macOS</button>
+                    <button class="btn-platform active" data-page="content-windows">Windows</button>
+                    <button class="btn-platform" data-page="content-linux-arch">Linux</button>
+                    <button class="btn-platform" data-page="content-macos">macOS</button>
                 </div>
             </div>
         </div>
+        <div id="content">
+            <div id="content-windows" class="page show">
+                <h2>Install OpenRCT2</h2>
+                <div>You can obtain the latest release or develop version of OpenRCT2 from <a href="https://openrct2.website">OpenRCT2</a>.</div>
+            </div>
+            <div id="content-linux-arch" class="page">
+                <h2>Install OpenRCT2</h2>
+                <div>You can obtain the latest release or develop version of OpenRCT2 from the <a href="https://aur.archlinux.org">ARU</a>.</div>
+                <div class="terminal">yaourt -S openrct2
+                                      openrct2 set-rct2 /path/to/rct2-install
+                                      openrct2
+                </div>
+            </div>
+            <div id="content-macos" class="page">
+                <h2>Install OpenRCT2</h2>
+                <div>You can obtain the latest release or develop version of OpenRCT2 from <a href="https://openrct2.website">OpenRCT2</a>.</div>
+            </div>
+        </div>
     </div>
+    <script type="text/javascript">
+        var buttons = document.querySelectorAll('.btn-platform');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function () {
+                if (!this.classList.contains('active')) {
+                    var activeButtons = document.querySelectorAll('.btn-platform.active');
+                    for (var j = 0; j < activeButtons.length; j++) {
+                        activeButtons[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    var pages = document.querySelectorAll('#content > .page');
+                    for (var j = 0; j < pages.length; j++) {
+                        pages[j].classList.remove('show');
+                    }
+                    var targetPage = document.getElementById(this.getAttribute('data-page'));
+                    if (targetPage) {
+                        targetPage.classList.add('show');
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
