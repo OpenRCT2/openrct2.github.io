@@ -95,6 +95,7 @@ a:hover {
 h2 {
     font-family: 'Segoe UI Light', Arial, sans-serif;
     margin: 4px 0;
+    text-align: center;
 }
 
 .page {
@@ -103,4 +104,48 @@ h2 {
 
 .show {
     display: block;
+}
+
+.steps {
+    list-style-type: none;
+    padding: 0;
+}
+
+.steps li:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.step {
+    float: left;
+}
+
+.step span {
+    display: block;
+    width: 42px;
+    height: 42px;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 42px;
+    color: #5a6e8a;
+    border: 2px solid #5a6e8a;
+    border-radius: 50%;
+}
+
+.step-body {
+    margin-left: 64px;
+}
+
+.btn-download {
+    background-color: #0a7eb2;
+    color: #eee;
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    background-color: #0d87bd;
+    text-decoration: none;
 }
