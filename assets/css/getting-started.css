@@ -1,0 +1,65 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: #fff;
+    background: url(../img/screenshot.png) no-repeat #000;
+    background-position-x: center;
+    -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
+}
+
+#gradient {
+    background-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%);
+    display: block;
+    height: 1080px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+}
+
+#banner {
+    background-color: #364C67;
+    margin-top: 16px;
+}
+
+#banner h1 {
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    padding: 18px 0;
+    text-align: center;
+}
+
+#banner-platform-selection-container {
+    text-align: center;
+}
+
+#banner-platform-selection {
+    padding: 8px 0;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#banner-platform-selection button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 40px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+}
+
+#banner-platform-selection button.active {
+    background-color: #0977a8;
+    color: #eee;
+}
