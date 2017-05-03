@@ -35,31 +35,31 @@ body {
     text-align: center;
 }
 
-#banner-platform-selection-container {
+.btn-platforms, .btn-distros {
     text-align: center;
 }
 
-#banner-platform-selection {
+.btn-h-container {
     padding: 8px 0;
     text-align: center;
     overflow: hidden;
     display: inline-block;
 }
 
-#banner-platform-selection button {
+.btn-h-container button {
     background: white;
     border: none;
     cursor: pointer;
     display: block;
     float: left;
-    height: 40px;
+    height: 32px;
     outline: none;
     padding: 0;
     margin: 0;
     width: 150px;
 }
 
-#banner-platform-selection button.active {
+.btn-h-container button.active {
     background-color: #0977a8;
     color: #eee;
 }
@@ -98,7 +98,7 @@ h2 {
     text-align: center;
 }
 
-.page {
+.page-platform, .page-distro {
     display: none;
 }
 
