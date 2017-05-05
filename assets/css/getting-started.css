@@ -149,3 +149,7 @@ h2 {
     background-color: #0d87bd;
     text-decoration: none;
 }
+
+p {
+    text-align: justify;
+}
