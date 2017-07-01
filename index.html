@@ -5,95 +5,13 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>OpenRCT2</title>
   <link rel="stylesheet" href="assets/css/index.css">
-  <script type="text/javascript">
-    // http://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript
-    function formatBytes (bytes, decimals) {
-       if(bytes == 0) return '0 Byte';
-       var k = 1000;
-       var dm = decimals + 1 || 3;
-       var sizes = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-       var i = Math.floor(Math.log(bytes) / Math.log(k));
-       return (bytes / Math.pow(k, i)).toPrecision(dm) + ' ' + sizes[i];
-    }
-
-    var platforms = {
-      windows: {
-        name: 'Windows',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-windows-portable-x64.zip',
-        size: 6831714, //bytes
-        version: '0.1.0'
-      },
-      linux: {
-        name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-linux-x86_64.tar.gz',
-        size: 15890343, //bytes
-        version: '0.1.0'
-      },
-      osx: {
-        name: 'OS X',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-macos.zip',
-        size: 7588421,
-        version: '0.1.0'
-      }
-    }
-
-    var current;
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var link = document.getElementsByClassName('link')[0];
-      var size = document.getElementsByClassName('size')[0];
-      var version = document.getElementsByClassName('version')[0];
-      var platform = document.getElementsByClassName('platform')[0];
-
-      if (navigator.platform.indexOf('Win') >= 0){
-        current = platforms.windows;
-      }
-
-      if (navigator.platform.indexOf('Linux') >= 0){
-        current = platforms.linux;
-      }
-
-      if (navigator.platform === 'MacIntel'){
-        current = platforms.osx;
-      }
-
-      if (current) {
-        link.href = current.link;
-        size.innerHTML = formatBytes(current.size, 1);
-        platform.innerHTML = current.name;
-        version.innerHTML = current.version;
-      }
-
-      platform.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        var keys = Object.keys(platforms);
-
-        for (var i = 0; i <= keys.length; i++) {
-          if (platforms[keys[i]].name === platform.innerHTML) {
-            if (i + 1 >= keys.length) {
-              i = 0;
-            } else {
-              i = i + 1;
-            }
-            
-            link.href = platforms[keys[i]].link;
-            size.innerHTML = formatBytes(platforms[keys[i]].size, 1);
-            platform.innerHTML = platforms[keys[i]].name;
-            version.innerHTML = platforms[keys[i]].version;
-            break;
-          }
-        }
-      });
-    });
-  </script>
 </head>
 <body>
   <a href="https://github.com/OpenRCT2/OpenRCT2"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
   <div id="background">
-    <video autoplay loop poster="assets/img/poster.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
-    </video>
+  <video autoplay loop poster="assets/img/poster.jpg">
+    <source src="assets/video.mp4" type="video/mp4">
+  </video>
   </div>
   <div id="gradient"></div>
   <div id="content">
@@ -104,12 +22,16 @@
       <li>
         <a class="link" href="https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-windows-portable-x64.zip">Download Latest Release</a>
         <div class="information">
-          <span class="version">0.1.0</span> — <a class="platform" href="#" title="Change platform…">Windows</a> — <span class="size">6.83 MB</span>
+          <span class="version">0.1.0</span> — <a class="platform" href="#" title="Change platform…">Windows (64-bit)</a> — <span class="size">6.83 MB</span>
         </div>
       </li>
       <li>
         <a href="https://openrct2.org/downloads/latest/develop">Download Development Build</a>
         <div class="information">Windows, Linux &amp; OS X</div>
+      </li>
+      <li>
+        <a href="getting-started/index.html">Getting Started Guide</a>
+        <div class="information">Installation, setup &amp; hints</div>
       </li>
     </ul>
   </div>
@@ -121,5 +43,7 @@
       <li><a href="https://servers.openrct2.website/">Master Server</a></li>
     </ul>
   </div>
+  <script type="text/javascript" src="assets/js/openrct2.website.js"></script>
+  <script type="text/javascript" src="assets/js/home.js"></script>
 </body>
 </html>
