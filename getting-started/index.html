@@ -143,7 +143,6 @@
                                 <button class="btn-distro active" data-page="content-linux-arch">Arch Linux</button>
                                 <button class="btn-distro" data-page="content-linux-opensuse">openSUSE</button>
                                 <button class="btn-distro" data-page="content-linux-ubuntu">Debian, Ubuntu, Mint</button>
-                                <button class="btn-distro" data-page="content-linux-alpine">Alpine</button>
                                 <button class="btn-distro" data-page="content-linux-gentoo">Gentoo</button>
                                 <button class="btn-distro" data-page="content-linux-fedora">Fedora</button>
                             </div>
@@ -163,41 +162,6 @@
                                 </li>
                                 <li>
                                     <div class="step"><span>2</span></div>
-                                    <div class="step-body">
-                                        <h3>Find your RCT2 installation</h3>
-                                        <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
-                                        <div class="terminal">openrct2 set-rct2 /path/to/rct2-install</div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-                        <div id="content-linux-alpine" class="page-distro">
-                            <h2>Install OpenRCT2 for Alpine Linux</h2>
-                            <ol class="steps">
-                                <li>
-                                    <div class="step"><span>1</span></div>
-                                    <div class="step-body">
-                                        <h3>Install dependencies</h3>
-                                        <div>You will need the dependencies to build the game - there is no package in apk for the game as of yet.</div>
-                                        <div class="terminal">apk add git gcc g++ jansson-dev libzip-dev curl-dev libressl-dev sdl2-dev fontconfig-dev sdl2_ttf-dev fts-dev</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="step"><span>2</span></div>
-                                    <div class="step-body">
-                                        <h3>Build the game</h3>
-                                        <div class="terminal">git clone https://github.com/OpenRCT2/OpenRCT2.git &amp;&amp; cd ./OpenRCT2 &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake ../ &amp;&amp; make</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="step"><span>3</span></div>
-                                    <div class="step-body">
-                                        <h3>Set up the files</h3>
-                                        <div class="terminal">cp -r ../data/ ./data/ &amp;&amp; make g2 &amp;&amp; mv ./g2.dat ./data/g2.dat</div>
-                                    </div>
-                                <li>
-                                <li>
-                                    <div class="step"><span>4</span></div>
                                     <div class="step-body">
                                         <h3>Find your RCT2 installation</h3>
                                         <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
