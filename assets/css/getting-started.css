@@ -1,0 +1,175 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: #fff;
+    background: url(../img/screenshot.png) no-repeat #000;
+    background-position-x: center;
+    background-attachment: fixed;
+    -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
+}
+
+body img {
+    display: block;
+    margin: 0 auto;
+}
+
+#gradient {
+    background-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%);
+    display: block;
+    height: 1080px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+}
+
+#banner {
+    background-color: #364C67;
+    margin-top: 16px;
+}
+
+#banner h1 {
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.btn-platforms, .btn-distros, .btn-phases, .btn-extractplatforms {
+    text-align: center;
+}
+
+.btn-h-container {
+    padding: 8px 0;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-h-container button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 32px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+}
+
+.btn-h-container button.active {
+    background-color: #0977a8;
+    color: #eee;
+}
+
+#content {
+    background-color: #eee;
+    color: #333;
+    margin: 0 auto;
+    padding: 24px;
+    width: 800px;
+}
+
+div.terminal {
+    background-color: #000;
+    border-radius: 6px;
+    color: #eee;
+    font-family: Consolas, monospace;
+    line-height: 20px;
+    margin: 8px 0;
+    padding: 8px 10px;
+    white-space: pre-line;
+}
+
+span.terminal {
+    background-color: #000;
+    border-radius: 6px;
+    color: #eee;
+    font-family: Consolas, monospace;
+    line-height: 20px;
+    padding: 0 8px 0 8px;
+    white-space: pre-line;
+}
+
+a {
+    color: #10b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Segoe UI Light', Arial, sans-serif;
+    margin: 4px 0 12px 0;
+    text-align: center;
+}
+
+.page-platform, .page-distro, .page-phase, .page-extractplatform {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.steps {
+    list-style-type: none;
+    padding: 0;
+}
+
+.steps li:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.step {
+    float: left;
+}
+
+.step span {
+    display: block;
+    width: 42px;
+    height: 42px;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 42px;
+    color: #5a6e8a;
+    border: 2px solid #5a6e8a;
+    border-radius: 50%;
+}
+
+.step-body {
+    margin-left: 64px;
+}
+
+.btn-download {
+    background-color: #0a7eb2;
+    color: #eee;
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    background-color: #0d87bd;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
