@@ -176,27 +176,17 @@
                                 <li>
                                     <div class="step"><span>1</span></div>
                                     <div class="step-body">
-                                        <h3>Install dependencies</h3>
-                                        <div>You will need the dependencies to build the game - there is no package for the game as of yet.</div>
-                                        <div class="terminal">sudo emerge --ask --verbose git gcc g++ jansson-dev libzip-dev curl-dev libressl-dev sdl2-dev fontconfig-dev sdl2_ttf-dev fts-dev</div>
+                                        <h3>Install OpenRCT2</h3>
+                                        <div>Accept ~amd64 (or equivalent for your arch) for the openrct2 package, add this to /etc/portage/package.accept_keywords/openrct2 (for example):</div>
+                                        <div class="terminal">games-simulation/openrct2 ~amd64</div>
+					<div>Alternatively, if you want the latest development build, use the live ebuild. The live ebuild will compile the latest dev version, and although they should work, it may not always compile (when upstream build has changed but the ebuild hasn't caught up yet).</div>
+                                        <div class="terminal">=games-simulation/openrct2-9999 **</div>
+                                        <div>And then install the package</div>
+                                        <div class="terminal">sudo emerge --ask --verbose openrct2</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="step"><span>2</span></div>
-                                    <div class="step-body">
-                                        <h3>Build the game</h3>
-                                        <div class="terminal">git clone https://github.com/OpenRCT2/OpenRCT2.git &amp;&amp; cd ./OpenRCT2 &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake ../ &amp;&amp; make</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="step"><span>3</span></div>
-                                    <div class="step-body">
-                                        <h3>Set up the files</h3>
-                                        <div class="terminal">cp -r ../data/ ./data/ &amp;&amp; make g2 &amp;&amp; mv ./g2.dat ./data/g2.dat</div>
-                                    </div>
-                                <li>
-                                <li>
-                                    <div class="step"><span>4</span></div>
                                     <div class="step-body">
                                         <h3>Find your RCT2 installation</h3>
                                         <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
