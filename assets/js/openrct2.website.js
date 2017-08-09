@@ -4,15 +4,15 @@ openrct2.Platform = Object.freeze({
     UNKNOWN: {},
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-windows-portable-win32.zip',
-        size: 6044873,
-        version: '0.1.0'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.1/OpenRCT2-0.1.1-windows-portable-win32.zip',
+        size: 6047161,
+        version: '0.1.1'
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-windows-portable-x64.zip',
-        size: 6831714,
-        version: '0.1.0'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.1/OpenRCT2-0.1.1-windows-portable-x64.zip',
+        size: 6823190,
+        version: '0.1.1'
     },
     MACOS: {
         name: 'macOS',
@@ -22,9 +22,9 @@ openrct2.Platform = Object.freeze({
     },
     LINUX: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.0/OpenRCT2-0.1.0-linux-x86_64.tar.gz',
-        size: 15890343,
-        version: '0.1.0'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.1.1/OpenRCT2-0.1.1-linux-x86_64.tar.gz',
+        size: 15949572,
+        version: '0.1.1'
     }
 });  // Object.freeze() prevents this from being futzed with
 
