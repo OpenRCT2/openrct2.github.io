@@ -145,6 +145,7 @@
                                 <button class="btn-distro" data-page="content-linux-ubuntu">Debian, Ubuntu, Mint</button>
                                 <button class="btn-distro" data-page="content-linux-gentoo">Gentoo</button>
                                 <button class="btn-distro" data-page="content-linux-fedora">Fedora</button>
+                                <button class="btn-distro" data-page="content-linux-nixos">NixOS</button>
                             </div>
                         </div>
                         <div id="content-linux-arch" class="page-distro show">
@@ -257,7 +258,7 @@
                             </ol>
                         </div>
                         <div id="content-linux-ubuntu" class="page-distro">
-                            <h2>Install OpenRCT2 for Debian 8, Ubuntu 16.04, 16.10 &amp;amp; Mint 18</h2>
+                            <h2>Install OpenRCT2 for Debian 8, Ubuntu 16.04, 16.10 &amp; Mint 18</h2>
                             <ol class="steps">
                                 <li>
                                     <div class="step"><span>1</span></div>
@@ -268,6 +269,30 @@
                                             sudo apt-get update
                                             sudo apt-get install openrct2
                                         </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step"><span>2</span></div>
+                                    <div class="step-body">
+                                        <h3>Find your RCT2 installation</h3>
+                                        <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
+                                        <div class="terminal">openrct2 set-rct2 /path/to/rct2-install</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="content-linux-nixos" class="page-distro">
+                            <h2>Install OpenRCT2 for NixOS</h2>
+                            <ol class="steps">
+                                <li>
+                                    <div class="step"><span>1</span></div>
+                                    <div class="step-body">
+                                        <h3>Install OpenRCT2</h3>
+                                        <div>The installation is currently based on your nixpkgs-channel. If you're using the unstable channel, just install the package.</div>
+                                        <div class="terminal">nix-env -iA nixos.openrct2</div>
+                                        <div>If you're on an stable channel (like 17.09 or older) you can install this single package from the unstable channel.</div>
+                                        <div class="terminal">nix-env -f https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz -iA openrct2</div>
+                                        <div>Alternatively you can build the <a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/games/openrct2/default.nix">expression</a> from the nixpkgs.</div>
                                     </div>
                                 </li>
                                 <li>
