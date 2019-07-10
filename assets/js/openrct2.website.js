@@ -4,15 +4,15 @@ openrct2.Platform = Object.freeze({
     UNKNOWN: {},
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.2/OpenRCT2-0.2.2-windows-portable-win32.zip',
-        size: 10967284,
-        version: '0.2.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.3/OpenRCT2-0.2.3-windows-portable-win32.zip',
+        size: 10292192,
+        version: '0.2.3'
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.2/OpenRCT2-0.2.2-windows-portable-x64.zip',
-        size: 11693405,
-        version: '0.2.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.3/OpenRCT2-0.2.3-windows-portable-x64.zip',
+        size: 11027954,
+        version: '0.2.3'
     },
     MACOS: {
         name: 'macOS',
