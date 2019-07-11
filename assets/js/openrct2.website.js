@@ -16,9 +16,9 @@ openrct2.Platform = Object.freeze({
     },
     MACOS: {
         name: 'macOS',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.2/OpenRCT2-0.2.2-macos.zip',
-        size: 24645872,
-        version: '0.2.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.2.3/OpenRCT2-0.2.3-macos-x64.zip',
+        size: 28150803,
+        version: '0.2.3'
     },
     LINUX: {
         name: 'Linux',
