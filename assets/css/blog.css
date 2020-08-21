@@ -1,0 +1,67 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: #fff;
+    background: url(../img/screenshot.png) no-repeat #000;
+    background-position-x: center;
+    background-attachment: fixed;
+    -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
+}
+
+body img {
+    display: block;
+    margin: 0 auto;
+}
+
+iframe {
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    seamless;
+    frameborder: 0;
+    scrolling: no;
+}
+
+#gradient {
+    background-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%);
+    display: block;
+    height: 1080px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+}
+
+#banner {
+    background-color: #364C67;
+    margin-top: 16px;
+}
+
+#banner h1 {
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    padding: 18px 0;
+    text-align: center;
+}
+
+#content {
+    background-color: #eee;
+    color: #333;
+    margin: 0 auto;
+    padding: 24px;
+    width: 800px;
+}
+
+blockquote {
+    font-style: italic;
+}
