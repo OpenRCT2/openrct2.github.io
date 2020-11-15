@@ -4,8 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   color: #fff;
-  background: url(../img/screenshot.png) no-repeat #000 center;
-  background-size: cover;
   -webkit-text-size-adjust: 100%; /* fix footer bug on iOS */
 }
 
@@ -33,26 +31,25 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  content: "";
   z-index: -1;
 }
 
 @media all and (min-width: 1920px), all and (min-height: 1080px) {
-  body {
-    background-size: cover;
-  }
   #background {
     top: 0;
     left: 0;
-    min-width: 100%; 
-    min-height: 100%;
     margin-top: 0;
     margin-left: 0;
+    min-width: 100%; 
+    min-height: 100%;
   }
 }
 
 @media all and (max-device-height: 799px) {
+  body {
+    background: url(../img/screenshot.png) no-repeat #000 center;
+    background-size: cover;
+  }
   #background {
     display: none;
   }
@@ -88,13 +85,11 @@ body {
 #content h2 {
   font-size: 18px;
   font-weight: normal;
-  margin: 0;
   margin-top: 8px;
 }
 
 #buttons {
   list-style: none;
-  margin: 0;
   padding: 0;
   margin-top: 32px;
 }
@@ -116,7 +111,6 @@ a:hover {
 }
 
 .information {
-  display: block;
   font-size: 12px;
   color: #7D7D7D;
 }
@@ -147,4 +141,29 @@ a:hover {
 
 #footer li:first-child {
   margin-left: 0;
+}
+
+.github-corner:hover .octo-arm {
+  animation:octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave{ 
+  0%,100% {
+    transform:rotate(0)
+  }
+  20%,60% {
+    transform:rotate(-25deg)
+  }
+  40%,80% {
+    transform:rotate(10deg)
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation:none
+  }
+  .github-corner .octo-arm {
+    animation:octocat-wave 560ms ease-in-out
+  }
 }
