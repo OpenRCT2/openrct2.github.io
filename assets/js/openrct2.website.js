@@ -4,27 +4,27 @@ openrct2.Platform = Object.freeze({
     UNKNOWN: {},
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.2/OpenRCT2-0.3.2-windows-portable-win32.zip',
-        size: 15570168,
-        version: '0.3.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.3/OpenRCT2-0.3.3-windows-portable-win32.zip',
+        size: 15987866,
+        version: '0.3.3'
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.2/OpenRCT2-0.3.2-windows-portable-x64.zip',
-        size: 16600225,
-        version: '0.3.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.3/OpenRCT2-0.3.3-windows-portable-x64.zip',
+        size: 17073701,
+        version: '0.3.3'
     },
     MACOS: {
         name: 'macOS',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.2/OpenRCT2-0.3.2-macos-x86-64.zip',
-        size: 25941845,
-        version: '0.3.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.3/OpenRCT2-0.3.3-macos-x86-64.zip',
+        size: 26987669,
+        version: '0.3.3'
     },
     LINUX: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.2/OpenRCT2-0.3.2-linux-x86_64.tar.gz',
-        size: 49921791,
-        version: '0.3.2'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.3.3/OpenRCT2-0.3.3-linux-x86_64.tar.gz',
+        size: 59421592,
+        version: '0.3.3'
     }
 });  // Object.freeze() prevents this from being futzed with
 
