@@ -28,16 +28,16 @@ openrct2.Platform = Object.freeze({
     }
 });  // Object.freeze() prevents this from being futzed with
 
-function getPlatform(){
-    if (navigator.platform.indexOf('Win') >= 0){
-        if (navigator.userAgent.indexOf("WOW64") === -1 && navigator.userAgent.indexOf("Win64") === -1 ){
+function getPlatform() {
+    if (navigator.platform.indexOf('Win') >= 0) {
+        if (navigator.userAgent.indexOf("WOW64") === -1 && navigator.userAgent.indexOf("Win64") === -1 ) {
             return openrct2.Platform.WINDOWS32;
         } else {
             return openrct2.Platform.WINDOWS64;  // 64-bit is the default as it is by far the most common these days
         }
-    } else if (navigator.platform.indexOf('Linux') >= 0){
+    } else if (navigator.platform.indexOf('Linux') >= 0) {
         return openrct2.Platform.LINUX;
-    } else if (navigator.platform === 'MacIntel'){
+    } else if (navigator.platform === 'MacIntel') {
         return openrct2.Platform.MACOS;
     } else {
         return openrct2.Platform.UNKNOWN;
