@@ -28,7 +28,7 @@ openrct2.Platform = Object.freeze({
     }
 });  // Object.freeze() prevents this from being futzed with
 
-function getPlatform() {
+const getPlatform = () => {
     const { platform, userAgent } = navigator;
     if (platform.includes('Win')) {
         const win64UserAgents = ["WOW64", "Win64"];
