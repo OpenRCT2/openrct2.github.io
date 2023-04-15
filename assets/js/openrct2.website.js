@@ -4,27 +4,27 @@ openrct2.Platform = Object.freeze({
     UNKNOWN: {},
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.3/OpenRCT2-0.4.3-windows-installer-win32.exe',
-        size: 29474030,
-        version: '0.4.3'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.4/OpenRCT2-0.4.4-windows-installer-win32.exe',
+        size: 34135992,
+        version: '0.4.4'
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.3/OpenRCT2-0.4.3-windows-installer-x64.exe',
-        size: 30143850,
-        version: '0.4.3'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.4/OpenRCT2-0.4.4-windows-installer-x64.exe',
+        size: 34726176,
+        version: '0.4.4'
     },
     MACOS: {
         name: 'macOS',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.3/OpenRCT2-0.4.3-macos-universal.zip',
-        size: 58493788,
-        version: '0.4.3'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.4/OpenRCT2-0.4.4-macos-universal.zip',
+        size: 63149052,
+        version: '0.4.4'
     },
     LINUX: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.3/OpenRCT2-0.4.3-linux-x86_64.AppImage',
-        size: 52511936,
-        version: '0.4.3'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.4/OpenRCT2-0.4.4-linux-x86_64.AppImage',
+        size: 65340608,
+        version: '0.4.4'
     }
 });  // Object.freeze() prevents this from being futzed with
 
