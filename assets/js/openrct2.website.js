@@ -1,4 +1,4 @@
-var openrct2 = {};
+let openrct2 = {};
 
 openrct2.Platform = Object.freeze({
     UNKNOWN: {},
@@ -28,16 +28,18 @@ openrct2.Platform = Object.freeze({
     }
 });  // Object.freeze() prevents this from being futzed with
 
-function getPlatform(){
-    if (navigator.platform.indexOf('Win') >= 0){
-        if (navigator.userAgent.indexOf("WOW64") === -1 && navigator.userAgent.indexOf("Win64") === -1 ){
+const getPlatform = () => {
+    const { platform, userAgent } = navigator;
+    if (platform.includes('Win')) {
+        const win64UserAgents = ["WOW64", "Win64"];
+        if (!win64UserAgents.includes(userAgent)) {
             return openrct2.Platform.WINDOWS32;
         } else {
             return openrct2.Platform.WINDOWS64;  // 64-bit is the default as it is by far the most common these days
         }
-    } else if (navigator.platform.indexOf('Linux') >= 0){
+    } else if (platform.includes('Linux')) {
         return openrct2.Platform.LINUX;
-    } else if (navigator.platform === 'MacIntel'){
+    } else if (platform.includes('MacIntel')) {
         return openrct2.Platform.MACOS;
     } else {
         return openrct2.Platform.UNKNOWN;

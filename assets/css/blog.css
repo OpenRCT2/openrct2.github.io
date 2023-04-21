@@ -23,9 +23,6 @@ iframe {
     margin: 0 auto;
     display: block;
     border: 1px solid #ccc;
-    seamless;
-    frameborder: 0;
-    scrolling: no;
 }
 
 #gradient {
