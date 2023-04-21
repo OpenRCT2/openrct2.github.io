@@ -1,7 +1,7 @@
-const setupPageControl = (container, pageType) => {
+function setupPageControl (container, pageType) {
     const buttons = document.querySelectorAll(container + ' .btn-' + pageType);
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', () => {
+        buttons[i].addEventListener('click', function () {
             if (!this.classList.contains('active')) {
                 const activeButtons = document.querySelectorAll(container + ' .btn-' + pageType + '.active');
                 for (let j = 0; j < activeButtons.length; j++) {
