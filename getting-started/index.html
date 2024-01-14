@@ -148,6 +148,7 @@
                                 <button class="btn-distro" data-page="content-linux-gentoo">Gentoo</button>
                                 <button class="btn-distro" data-page="content-linux-fedora">Fedora</button>
                                 <button class="btn-distro" data-page="content-linux-nixos">NixOS</button>
+								<button class="btn-distro" data-page="content-linux-flatpak">Flatpak (cross-distro)</button>
                             </div>
                         </div>
                         <div id="content-linux-arch" class="page-distro show">
@@ -306,6 +307,27 @@
                                         <h3>Find your RCT2 installation</h3>
                                         <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
                                         <div class="terminal">openrct2 set-rct2 /path/to/rct2-install</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+						<div id="content-linux-flatpak" class="page-distro">
+                            <h2>Install OpenRCT2 through Flatpak</h2>
+                            <ol class="steps">
+                                <li>
+                                    <div class="step"><span>1</span></div>
+                                    <div class="step-body">
+                                        <h3>Install OpenRCT2</h3>
+                                        <div>The installation requires Flatpak. <a href="https://flatpak.org/setup/">Check</a> if your distro includes Flatpak and the Flathub repository</div>
+                                        <div class="terminal">flatpak install flathub io.openrct2.OpenRCT2</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step"><span>2</span></div>
+                                    <div class="step-body">
+                                        <h3>Find your RCT2 installation</h3>
+                                        <p>When OpenRCT2 first launches, you will be prompted to select the directory where you installed RCT2. You can also set the RCT2 path from the command line should you wish - use the command below.</p>
+                                        <div class="terminal">flatpak run io.openrct2.OpenRCT2 set-rct2 /path/to/rct2-install</div>
                                     </div>
                                 </li>
                             </ol>
