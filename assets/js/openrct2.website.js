@@ -4,33 +4,33 @@ openrct2.Platform = Object.freeze({
     UNKNOWN: {},
     WINDOWS_ARM64: {
         name: 'Windows (ARM64)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.7/OpenRCT2-0.4.7-windows-installer-arm64.exe',
-        size: 59963808,
-        version: '0.4.7'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-arm64.exe',
+        size: 59982672,
+        version: '0.4.8'
     },
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.7/OpenRCT2-0.4.7-windows-installer-win32.exe',
-        size: 60477672,
-        version: '0.4.7'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-win32.exe',
+        size: 60495448,
+        version: '0.4.8'
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.7/OpenRCT2-0.4.7-windows-installer-x64.exe',
-        size: 61192680,
-        version: '0.4.7'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-x64.exe',
+        size: 61216240,
+        version: '0.4.8'
     },
     MACOS: {
         name: 'macOS',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.7/OpenRCT2-0.4.7-macos-universal.zip',
-        size: 84391700,
-        version: '0.4.7'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-macos-universal.zip',
+        size: 84436045,
+        version: '0.4.8'
     },
     LINUX: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.7/OpenRCT2-0.4.7-linux-x86_64.AppImage',
-        size: 91952320,
-        version: '0.4.7'
+        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-linux-x86_64.AppImage',
+        size: 92083392,
+        version: '0.4.8'
     }
 });  // Object.freeze() prevents this from being futzed with
 
