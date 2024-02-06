@@ -6,7 +6,7 @@ const owner = 'openrct2';
 const repo = 'openrct2';
 
 // Platform-specific download links
-const platformLinks = Object.freeze({
+const platformLinks = {
     UNKNOWN: {},
     WINDOWS_ARM64: {
         name: 'Windows (ARM64)',
@@ -28,7 +28,7 @@ const platformLinks = Object.freeze({
         name: 'Linux',
         link: 'linux-x86_64.AppImage',
     }
-});
+};
 
 // Function to get visitor's platform
 function getPlatform(){
@@ -49,7 +49,7 @@ function getPlatform(){
     }
 }
 
-openrct2.Platform = Object.freeze(platformLinks);
+openrct2.Platform = platformLinks;
 
 async function getLatestRelease() {
     // Fetch latest release from GitHub API
@@ -63,23 +63,27 @@ async function getLatestRelease() {
             // Container to hold download links
             const downloadContainer = document.getElementById('download-container');
 
-            // Get user's platform
-            const userPlatform = getPlatform();
-
-            // Get platform-specific download link and object size
-            const platformDownload = platformLinks[userPlatform];
-
-            if (platformDownload) {
-                const downloadLink = assets.find(asset => asset.name.toLowerCase().includes(platformDownload.link.toLowerCase()));
-
-                if (downloadLink) {
-                    openrct2.currentPlatform = platformDownload;
-                    openrct2.currentPlatform.version = tagName;
-                    openrct2.currentPlatform.name = platformDownload.name;
-                    openrct2.currentPlatform.link = downloadLink.browser_download_url;
-                    openrct2.currentPlatform.size = downloadLink.size;
+            for (const platform in platformLinks) {
+                if (platformLinks.hasOwnProperty(platform) && platform !== 'UNKNOWN') {
+                    const platformDownload = platformLinks[platform];
+                    const downloadLink = assets.find(asset => asset.name.toLowerCase().includes(platformDownload.link.toLowerCase()));
+                    if (downloadLink) {
+                        openrct2.Platform[platform] = {
+                            name: platformDownload.name,
+                            link: downloadLink.browser_download_url,
+                            size: downloadLink.size,
+                            version: tagName
+                        };
+                    } else {
+                        openrct2.Platform[platform] = {
+                            name: platformDownload.name,
+                            link: null,
+                            size: null
+                        };
+                    }
                 }
             }
+            openrct2.currentPlatform = openrct2.Platform[getPlatform()];
         })
         .catch(error => {
             console.error('Error fetching GitHub release information:', error);
