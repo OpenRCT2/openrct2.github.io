@@ -1,55 +1,87 @@
 var openrct2 = {};
+openrct2.currentPlatform = {};
 
-openrct2.Platform = Object.freeze({
+// GitHub repository information
+const owner = 'openrct2';
+const repo = 'openrct2';
+
+// Platform-specific download links
+const platformLinks = Object.freeze({
     UNKNOWN: {},
     WINDOWS_ARM64: {
         name: 'Windows (ARM64)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-arm64.exe',
-        size: 59982672,
-        version: '0.4.8'
+        link: 'windows-installer-arm64.exe',
     },
     WINDOWS32: {
         name: 'Windows (32-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-win32.exe',
-        size: 60495448,
-        version: '0.4.8'
+        link: 'windows-installer-win32.exe',
     },
     WINDOWS64: {
         name: 'Windows (64-bit)',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-windows-installer-x64.exe',
-        size: 61216240,
-        version: '0.4.8'
+        link: 'windows-installer-x64.exe',
     },
     MACOS: {
         name: 'macOS',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-macos-universal.zip',
-        size: 84436045,
-        version: '0.4.8'
+        link: 'macos-universal.zip',
     },
     LINUX: {
         name: 'Linux',
-        link: 'https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.4.8/OpenRCT2-0.4.8-linux-x86_64.AppImage',
-        size: 92083392,
-        version: '0.4.8'
+        link: 'linux-x86_64.AppImage',
     }
-});  // Object.freeze() prevents this from being futzed with
+});
 
+// Function to get visitor's platform
 function getPlatform(){
     if (navigator.platform.indexOf('Win') >= 0){
         if (navigator.userAgent.indexOf("ARM64") >= 0 ){
-            return openrct2.Platform.WINDOWS_ARM64;
+            return 'WINDOWS_ARM64';
         } else if (navigator.userAgent.indexOf("WOW64") === -1 && navigator.userAgent.indexOf("Win64") === -1 ){
-            return openrct2.Platform.WINDOWS32;
+            return 'WINDOWS32';
         } else {
-            return openrct2.Platform.WINDOWS64;  // 64-bit is the default as it is by far the most common these days
+            return 'WINDOWS64';
         }
     } else if (navigator.platform.indexOf('Linux') >= 0){
-        return openrct2.Platform.LINUX;
+        return 'LINUX';
     } else if (navigator.platform === 'MacIntel'){
-        return openrct2.Platform.MACOS;
+        return 'MACOS';
     } else {
-        return openrct2.Platform.UNKNOWN;
+        return 'UNKNOWN';
     }
 }
 
-openrct2.currentPlatform = getPlatform();
+openrct2.Platform = Object.freeze(platformLinks);
+
+async function getLatestRelease() {
+    // Fetch latest release from GitHub API
+    await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`)
+        .then(response => response.json())
+        .then(data => {
+            // Extract the tag name and assets
+            const tagName = data.tag_name;
+            const assets = data.assets;
+
+            // Container to hold download links
+            const downloadContainer = document.getElementById('download-container');
+
+            // Get user's platform
+            const userPlatform = getPlatform();
+
+            // Get platform-specific download link and object size
+            const platformDownload = platformLinks[userPlatform];
+
+            if (platformDownload) {
+                const downloadLink = assets.find(asset => asset.name.toLowerCase().includes(platformDownload.link.toLowerCase()));
+
+                if (downloadLink) {
+                    openrct2.currentPlatform = platformDownload;
+                    openrct2.currentPlatform.version = tagName;
+                    openrct2.currentPlatform.name = platformDownload.name;
+                    openrct2.currentPlatform.link = downloadLink.browser_download_url;
+                    openrct2.currentPlatform.size = downloadLink.size;
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching GitHub release information:', error);
+        });
+}

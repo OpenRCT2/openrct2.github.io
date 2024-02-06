@@ -8,12 +8,13 @@ function formatBytes (bytes, decimals) {
    return (bytes / Math.pow(k, i)).toPrecision(dm) + ' ' + sizes[i];
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
   var link = document.getElementsByClassName('link')[0];
   var size = document.getElementsByClassName('size')[0];
   var version = document.getElementsByClassName('version')[0];
   var platform = document.getElementsByClassName('platform')[0];
 
+  await getLatestRelease();
   if (openrct2.currentPlatform !== openrct2.Platform.UNKNOWN) {
     link.href = openrct2.currentPlatform.link;
     size.innerHTML = formatBytes(openrct2.currentPlatform.size, 1);
