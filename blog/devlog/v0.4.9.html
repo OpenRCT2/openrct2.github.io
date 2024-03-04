@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenRCT2 - Getting Started</title>
+    <link href="../../assets/css/blog.css" rel="stylesheet" />
+</head>
+<body>
+<div id="gradient"></div>
+<div>
+    <div id="banner">
+        <h1>Devlog for the v0.4.9 release</h1>
+    </div>
+    <div id="content">
+        We just released v0.4.9 of OpenRCT2! Since January, we have changed our release schedule to a release every month. Since most of our users stick to releases, rather than development builds, this means that new features and fixes should now filter through more quickly.
+
+        <h2>Refactors</h2>
+
+        Much work in this release has been refactoring work - which means we have made some changes to make the code cleaner, more easily maintainable and more easily extensible. In practical terms, this should lead to a more stable game, fewer bugs and easier implementation of new features.
+
+        In this area, most work has gone into creating a game state object. Right now, the game can only have one park loaded at any given time, but this work with allow handling more parks at once. This in turn means we can improve the reliability of autosaves, and make the title sequences smoother by loading up the next park while the current park is still playing.
+
+        <h2>RollerCoaster Tycoon 1</h2>
+
+        On to more visible changes. In this release, we have massively improved RollerCoaster Tycoon 1 compatibility. OpenRCT2 now uses actual ports of the RCT1 vehicles, rather than their RCT2, which do not always behave the same. We also ported a few scenery objects that were slightly changed in RCT2, and fixed half a dozen bugs in the import. All of this means that RCT1 saves and scenarios will now look and behave much more accurately. Additionally, since RCT1 parks often have some scenery that is hidden from the Scenery window (the Mine scenery in Forest Frontiers is an example), we added an option to manage what gets hidden and what does not.
+
+        As a bonus, we also added terrains from beta versions of RCT1. These are available to you even if you don’t have RCT1 linked. These have been painstakingly restored from screenshots by spacek and Maji, who also ported all the vehicles and walls.
+
+        <h2>Other changes</h2>
+
+        We added an Ukrainian translation. It’s still a work in progress, but almost all of the interface has been translated. We also added a sound for water ride lifts. Right now though, this requires hacking in a chain lift. In future releases, we aim to introduce actual log flume lifts that also allow faster speeds. Finally, we added an option to reload an object, which is especially useful if you’re designing an object and want to see your changes reflected.
+
+        That’s all for this time, happy building!
+    </div>
+</div>
+</body>
+</html>
